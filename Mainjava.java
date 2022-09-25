@@ -76,6 +76,19 @@ public class Mainjava {
             System.out.println(y);
             ++y;
         }
+        //do while
+       int contenere =1;
+      do {System.out.println("Hello im youssef ");
+           contenere++;
+         }while (contenere <=10);
+      //array opjk
+      String [0] array =new String [5];
+      array [1]="html";
+      array[2]="c++";
+      array[3]="js";
+      array[4]="css";
+     System.out.println(array [3]);
+
 
     }
 
