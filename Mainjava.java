@@ -10,7 +10,7 @@ public class Mainjava {
     }
     static int printdata(int numb2,int numb3){
         return numb2*numb3;
-    };
+    }
     public static void main(String[] args) {
 
         //methode return
@@ -88,8 +88,28 @@ public class Mainjava {
       array[3]="js";
       array[4]="css";
      System.out.println(array [3]);
-
+//try catch
+     int [] number={1,3,7,9};
+     try{
+         System.out.println(number[2]);
+      }catch(Exception error){}finally {System.out.println(number[3]);
+      }
+//class opjk
+    Animle animle = new Animle ();
+    animle.name="losi";
+    animle.age=2;
+    animle.type="dog";
+    animle.explain();
 
     }
 
+}
+public class Animle{
+String name;
+Int age;
+String color;
+String type;
+public void explain (){
+System.out.println("is a nice animal");
+}
 }
