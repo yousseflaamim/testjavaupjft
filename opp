@@ -1,0 +1,20 @@
+//class opjk
+    Animle animle = new Animle ();
+    animle.name="losi";
+    animle.age=2;
+    animle.type="dog";
+    animle.explain();
+
+    }
+
+}
+public class Animle{
+String name;
+Int age;
+String color;
+String type;
+public void explain (){
+System.out.println("is a nice animal");
+}
+    
+}
