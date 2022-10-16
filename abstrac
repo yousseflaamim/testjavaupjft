@@ -1,0 +1,42 @@
+
+public abstract  class Form {
+    public abstract void calculersurf();
+    
+    
+//    ............................................................................
+    public class Testfrom {
+    public static void main(String[] args) {
+        
+        
+        
+        Cercle cercle = new Cercle(4);
+        Carre carre=new Carre(2);
+        carre.calculersurf();
+        cercle.calculersurf();
+    }
+}
+   // ..........................................................................
+        public class Cercle extends Form{
+    public  int rayon;
+    public Cercle(int rayon){
+        this.rayon=rayon;
+
+    }
+    @Override
+    public void calculersurf() {
+        System.out.println("le rayon is  "+Math.PI*rayon*rayon);
+
+    }
+}
+//................................................................
+    public class Carre extends Form{
+    private  int cote;
+    public Carre(int cote){
+        this.cote=cote;
+    }
+    @Override
+    public void calculersurf() {
+        System.out.println("carre is "+cote*cote);
+
+    }
+}
