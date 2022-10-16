@@ -112,4 +112,107 @@ String type;
 public void explain (){
 System.out.println("is a nice animal");
 }
+    
 }
+//abstrac.............................................................
+public abstract  class Form {
+    public abstract void calculersurf();
+    
+    
+//    ............................................................................
+    public class Testfrom {
+    public static void main(String[] args) {
+        
+        
+        
+        Cercle cercle = new Cercle(4);
+        Carre carre=new Carre(2);
+        carre.calculersurf();
+        cercle.calculersurf();
+    }
+}
+   // ..........................................................................
+        public class Cercle extends Form{
+    public  int rayon;
+    public Cercle(int rayon){
+        this.rayon=rayon;
+
+    }
+    @Override
+    public void calculersurf() {
+        System.out.println("le rayon is  "+Math.PI*rayon*rayon);
+
+    }
+}
+//................................................................
+    public class Carre extends Form{
+    private  int cote;
+    public Carre(int cote){
+        this.cote=cote;
+    }
+    @Override
+    public void calculersurf() {
+        System.out.println("carre is "+cote*cote);
+
+    }
+}
+  //  extande......................................................
+    import java.util.ArrayList;
+
+public class Payment {
+    public static void main(String[] args) {
+     Chef ali = new Chef("ali");
+     Dricteur momr=new Dricteur("momr");
+     ouvrier jamal=new ouvrier("jamal");
+        ArrayList<Salarier>salariers=new ArrayList<>();
+        salariers.add(ali);
+        salariers.add(momr);
+        salariers.add(jamal);
+        for (Salarier salari:salariers
+             ) {
+            salari.afficheSalire();
+        }
+    }
+}
+    //..................................................................
+    public class Salarier {
+    double salaair;
+  String name;
+   public  Salarier(String name){
+       this.name=name;
+       this.salaair=salaair;
+
+   }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+    public void afficheSalire(){
+       System.out.println("sallire"+salaair+"nome "+name);
+    }
+}
+//..................................................................
+    public class Chef extends Salarier {
+
+    public Chef(String name) {
+        super(name);
+        salaair=5000;
+    }
+}
+//..................................
+    public class ouvrier extends Salarier{
+    public ouvrier(String name) {
+        super(name);
+        salaair=7000;
+    }
+}
+//....................................................
+    public class Dricteur extends Salarier{
+    public Dricteur(String name) {
+        super(name);
+        salaair=6000;
+    }
+}
+
+
